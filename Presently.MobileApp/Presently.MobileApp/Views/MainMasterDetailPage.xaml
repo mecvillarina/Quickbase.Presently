@@ -6,6 +6,7 @@
                   xmlns:prism="http://prismlibrary.com"
                   xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
                   prism:ViewModelLocator.AutowireViewModel="True"
+                  IsGestureEnabled="{Binding IsGestureEnabled, Mode=TwoWay}"
                   IsPresented="{Binding IsPresented, Mode=TwoWay}">
 
     <MasterDetailPage.Master>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MobileContentPageBase x:Class="Presently.MobileApp.Views.ClockPage"
+                             xmlns="http://xamarin.com/schemas/2014/forms"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                             xmlns:prism="http://prismlibrary.com"
+                             xmlns:views="clr-namespace:Presently.MobileApp.Views"
+                             prism:ViewModelLocator.AutowireViewModel="True"
+                             BackgroundColor="{StaticResource SecondaryBackgroundColor}">
+    <views:MobileContentPageBase.Content>
+        <Grid RowDefinitions="Auto,*,Auto"
+              RowSpacing="0">
+            <Grid ColumnDefinitions="Auto,*"
+                  HorizontalOptions="FillAndExpand"
+                  Style="{StaticResource NavigationBarStyle}"
+                  VerticalOptions="FillAndExpand">
+
+                <Grid Padding="30,0,25,0">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BackCommand}"
+                                              NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                    <Label FontFamily="FontAwesomeSolid"
+                           FontSize="{StaticResource MediumFontSize}"
+                           Text="{StaticResource IconArrowLeft}"
+                           TextColor="{StaticResource GrayDarkTextColor}"
+                           VerticalOptions="FillAndExpand"
+                           VerticalTextAlignment="Center" />
+                </Grid>
+
+                <Label Grid.Column="1"
+                       FontSize="{StaticResource MediumFontSize}"
+                       Text="{Binding Title}"
+                       TextColor="{StaticResource LightGrayTextColor}"
+                       TextTransform="Uppercase"
+                       VerticalOptions="FillAndExpand"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+
+        </Grid>
+    </views:MobileContentPageBase.Content>
+</views:MobileContentPageBase>

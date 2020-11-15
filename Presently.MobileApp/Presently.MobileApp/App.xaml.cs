@@ -53,6 +53,8 @@ namespace Presently.MobileApp
             containerRegistry.RegisterForNavigation<MainMasterDetailPage, MainMasterDetailPageViewModel>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<AccountPage, AccountPageViewModel>();
+            containerRegistry.RegisterForNavigation<AttendanceLogPage, AttendanceLogPageViewModel>();
+            containerRegistry.RegisterForNavigation<ClockPage, ClockPageViewModel>();
         }
 
         private void RegisterManagers(IContainerRegistry containerRegistry)

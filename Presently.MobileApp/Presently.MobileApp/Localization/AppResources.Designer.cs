@@ -160,6 +160,24 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clock In.
+        /// </summary>
+        public static string LabelClockIn {
+            get {
+                return ResourceManager.GetString("LabelClockIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clock Out.
+        /// </summary>
+        public static string LabelClockOut {
+            get {
+                return ResourceManager.GetString("LabelClockOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Employee ID.
         /// </summary>
         public static string LabelEmployeeID {
@@ -277,11 +295,20 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Account.
+        ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string TitleAccount {
             get {
                 return ResourceManager.GetString("TitleAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attendance Logs.
+        /// </summary>
+        public static string TitleAttendanceLogs {
+            get {
+                return ResourceManager.GetString("TitleAttendanceLogs", resourceCulture);
             }
         }
     }

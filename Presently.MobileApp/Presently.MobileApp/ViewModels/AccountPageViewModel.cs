@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using Presently.MobileApp.Common.Constants;
 using Presently.MobileApp.Localization;
 using Presently.MobileApp.Managers.Abstractions;
 using Presently.MobileApp.PubSubEvents;
@@ -6,6 +7,8 @@ using Presently.MobileApp.Utilities.Abstractions;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Navigation;
+using System;
+using System.Threading.Tasks;
 
 namespace Presently.MobileApp.ViewModels
 {
@@ -22,7 +25,11 @@ namespace Presently.MobileApp.ViewModels
             _appUserManager = appUserManager;
             Title = AppResources.TitleAccount;
             TappedMenuCommand = new DelegateCommand(() => EventAggregator.GetEvent<HamburgerTappedEvent>().Publish());
+
+            ClockInCommand = new DelegateCommand(async () => await OnClock("Clock In"));
+            ClockOutCommand = new DelegateCommand(async () => await OnClock("Clock Out"));
         }
+
 
         private string _firstName;
         public string FirstName
@@ -60,6 +67,16 @@ namespace Presently.MobileApp.ViewModels
         }
 
         public DelegateCommand TappedMenuCommand { get; private set; }
+        public DelegateCommand ClockInCommand { get; private set; }
+        public DelegateCommand ClockOutCommand { get; private set; }
+
+        private async Task OnClock(string logType)
+        {
+            var parameters = new NavigationParameters();
+            parameters.Add(NavParameters.LogType, logType);
+
+            await PageNavigator.NavigateAsync(ViewNames.ClockPage, parameters);
+        }
 
         private void SetProfile()
         {
@@ -75,6 +92,7 @@ namespace Presently.MobileApp.ViewModels
         {
             base.OnNavigatedTo(parameters);
             SetProfile();
+            EventAggregator.GetEvent<HamburgerSetSwipeGestureEvent>().Publish(true);
         }
     }
 }

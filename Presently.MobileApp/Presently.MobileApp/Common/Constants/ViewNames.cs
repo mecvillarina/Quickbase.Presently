@@ -8,6 +8,8 @@
         public const string LoginPage = nameof(LoginPage);
         public const string MainMasterDetailPage = nameof(MainMasterDetailPage);
         public const string AccountPage = nameof(AccountPage);
+        public const string AttendanceLogPage = nameof(AttendanceLogPage);
+        public const string ClockPage = nameof(ClockPage);
 
         public static string GetMainMasterPage()
         {

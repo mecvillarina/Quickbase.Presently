@@ -150,6 +150,12 @@
   <data name="LabelAttendanceType" xml:space="preserve">
     <value>Attendance Type</value>
   </data>
+  <data name="LabelClockIn" xml:space="preserve">
+    <value>Clock In</value>
+  </data>
+  <data name="LabelClockOut" xml:space="preserve">
+    <value>Clock Out</value>
+  </data>
   <data name="LabelEmployeeID" xml:space="preserve">
     <value>Employee ID</value>
   </data>
@@ -190,6 +196,9 @@
     <value>Logging In...</value>
   </data>
   <data name="TitleAccount" xml:space="preserve">
-    <value>Account</value>
+    <value>Home</value>
+  </data>
+  <data name="TitleAttendanceLogs" xml:space="preserve">
+    <value>Attendance Logs</value>
   </data>
 </root>
