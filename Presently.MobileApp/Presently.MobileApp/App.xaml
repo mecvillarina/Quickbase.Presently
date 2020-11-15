@@ -2,8 +2,17 @@
 <prism:PrismApplication x:Class="Presently.MobileApp.App"
                         xmlns="http://xamarin.com/schemas/2014/forms"
                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                        xmlns:prism="http://prismlibrary.com">
+                        xmlns:prism="http://prismlibrary.com"
+                        xmlns:res="clr-namespace:Presently.MobileApp.Resources">
     <prism:PrismApplication.Resources>
-        <ResourceDictionary />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <res:Colors />
+                <res:Icons />
+                <res:CoreStyles />
+                <res:Sizes />
+                <res:Converters />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </prism:PrismApplication.Resources>
 </prism:PrismApplication>

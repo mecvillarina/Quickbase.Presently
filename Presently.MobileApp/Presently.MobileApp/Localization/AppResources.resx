@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
   <data name="Error_NoInternetConnectivity" xml:space="preserve">
     <value>Make sure that Wi-Fi or mobile data is turned on then try again.</value>
   </data>
@@ -128,5 +131,11 @@
   </data>
   <data name="Error_SessionExpireTitle" xml:space="preserve">
     <value>Session Expired</value>
+  </data>
+  <data name="LabelAccessCode" xml:space="preserve">
+    <value>Access Code</value>
+  </data>
+  <data name="LabelEmployeeID" xml:space="preserve">
+    <value>Employee ID</value>
   </data>
 </root>

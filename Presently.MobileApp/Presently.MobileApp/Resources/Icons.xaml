@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary x:Class="Presently.MobileApp.Resources.Icons"
+                    xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <x:String x:Key="IconCoffee">&#xf0f4;</x:String>
+    <x:String x:Key="IconArrowRight">&#xf061;</x:String>
+    <x:String x:Key="IconArrowLeft">&#xf060;</x:String>
+    <x:String x:Key="IconCheckIconCircle">&#xf058;</x:String>
+    <x:String x:Key="IconClose">&#xf00d;</x:String>
+    <x:String x:Key="IconShip">&#xf21a;</x:String>
+    <x:String x:Key="IconBar">&#xf0c9;</x:String>
+    <x:String x:Key="IconSignout">&#xf2f5;</x:String>
+    <x:String x:Key="IconUserCircle">&#xf2bd;</x:String>
+    <x:String x:Key="IconHistory">&#xf1da;</x:String>
+    <x:String x:Key="IconBell">&#xf0f3;</x:String>
+    <x:String x:Key="IconPlus">&#xf067;</x:String>
+    <x:String x:Key="IconMinus">&#xf068;</x:String>
+    <x:String x:Key="IconInfoCircle">&#xf05a;</x:String>
+</ResourceDictionary>

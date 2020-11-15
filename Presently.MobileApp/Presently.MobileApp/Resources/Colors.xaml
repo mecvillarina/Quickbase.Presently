@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary x:Class="Presently.MobileApp.Resources.Colors"
+                    xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="AccentColor">#92DACC</Color>
+    <Color x:Key="PrimaryColor1">#4A73B1</Color>
+    <Color x:Key="PrimaryColor1Opaque">#604A73B1</Color>
+    <Color x:Key="PrimaryColor2">#7EC3FF</Color>
+    <Color x:Key="PrimaryColor3">#47C9B1</Color>
+    <Color x:Key="BaseButtonTextColor">#FFFFFF</Color>
+    <Color x:Key="ContentPageBaseBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="NavigationBarBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="NavigationBarTitleColor">#000000</Color>
+    <Color x:Key="GrayDarkTextColor">#707070</Color>
+    <Color x:Key="LightGrayTextColor">#9B9B9B</Color>
+    <Color x:Key="LightGrayColor">#C5C5C5</Color>
+    <Color x:Key="LightGray2Color">#E6E6E6</Color>
+    <Color x:Key="LightGray3Color">#B1B1B1</Color>
+    <Color x:Key="PrimaryBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="SecondaryBackgroundColor">#F3F3F3</Color>
+    <Color x:Key="Secondary2BackgroundColor">#EFF7FE</Color>
+    <Color x:Key="EntryBackgroundColor">#F7F7F7</Color>
+    <Color x:Key="ControlTitleTextColor">#919191</Color>
+    <Color x:Key="EntryTextColor">#919191</Color>
+    <Color x:Key="BlackTextColor">#141414</Color>
+    <Color x:Key="LineSeparatorColor">#E6E6E6</Color>
+    <Color x:Key="BorderLineColor">#DBE4CF</Color>
+
+    <Color x:Key="SliderTrackSelectionColor">#92DACC</Color>
+    <Color x:Key="SliderTrackColor">#E6E6E6</Color>
+    <Color x:Key="SliderKnobColor">#92DACC</Color>
+
+</ResourceDictionary>

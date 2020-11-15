@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MobileContentPageBase x:Class="Presently.MobileApp.Views.LoginPage"
+                             xmlns="http://xamarin.com/schemas/2014/forms"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                             xmlns:effects="clr-namespace:Presently.MobileApp.Effects"
+                             xmlns:i18n="clr-namespace:Presently.MobileApp.Localization"
+                             xmlns:prism="http://prismlibrary.com"
+                             xmlns:views="clr-namespace:Presently.MobileApp.Views"
+                             prism:ViewModelLocator.AutowireViewModel="True">
+
+    <views:MobileContentPageBase.Content>
+        <Grid RowDefinitions="Auto, *">
+            <Grid Grid.Row="0">
+                <Image Aspect="AspectFill"
+                       Source="login_background_seg" />
+
+                <Image HeightRequest="60"
+                       HorizontalOptions="CenterAndExpand"
+                       Source="logo_alon_white"
+                       VerticalOptions="CenterAndExpand" />
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <ScrollView Padding="35,20">
+                    <StackLayout Spacing="10">
+                        <StackLayout Spacing="5">
+                            <Label Style="{StaticResource ControlTitleTextColor}"
+                                   Text="{x:Static i18n:AppResources.LabelEmployeeID}" />
+
+                            <Entry Text="{Binding EmployeeId}">
+                                <Entry.Effects>
+                                    <effects:NoBorderEffect />
+                                </Entry.Effects>
+                            </Entry>
+                        </StackLayout>
+
+                        <StackLayout Spacing="5">
+                            <Label Style="{StaticResource ControlTitleTextColor}"
+                                   Text="{x:Static i18n:AppResources.LabelAccessCode}" />
+
+                            <Entry IsPassword="True"
+                                   Text="{Binding AccessCode}">
+                                <Entry.Effects>
+                                    <effects:NoBorderEffect />
+                                </Entry.Effects>
+                            </Entry>
+                        </StackLayout>
+
+                        <Button BackgroundColor="{StaticResource AccentColor}"
+                                Command="{Binding LoginCommand}"
+                                Text="{x:Static i18n:AppResources.ButtonLogin}" />
+
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </Grid>
+    </views:MobileContentPageBase.Content>
+</views:MobileContentPageBase>

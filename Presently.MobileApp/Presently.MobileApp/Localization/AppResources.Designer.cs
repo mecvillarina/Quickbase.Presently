@@ -61,6 +61,15 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string ButtonLogin {
+            get {
+                return ResourceManager.GetString("ButtonLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Make sure that Wi-Fi or mobile data is turned on then try again..
         /// </summary>
         public static string Error_NoInternetConnectivity {
@@ -93,6 +102,24 @@ namespace Presently.MobileApp.Localization {
         public static string Error_SessionExpireTitle {
             get {
                 return ResourceManager.GetString("Error_SessionExpireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Code.
+        /// </summary>
+        public static string LabelAccessCode {
+            get {
+                return ResourceManager.GetString("LabelAccessCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Employee ID.
+        /// </summary>
+        public static string LabelEmployeeID {
+            get {
+                return ResourceManager.GetString("LabelEmployeeID", resourceCulture);
             }
         }
     }

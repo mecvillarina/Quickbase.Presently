@@ -1,4 +1,5 @@
 using Acr.UserDialogs;
+using Presently.MobileApp.Common.Constants;
 using Presently.MobileApp.Managers;
 using Presently.MobileApp.Managers.Abstractions;
 using Presently.MobileApp.Managers.Mappers;
@@ -31,7 +32,7 @@ namespace Presently.MobileApp
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync($"{ViewNames.NavigationPage}/{ViewNames.SplashScreenPage}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -47,6 +48,8 @@ namespace Presently.MobileApp
         private void RegisterUI(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<SplashScreenPage, SplashScreenPageViewModel>();
+            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
         }
 
