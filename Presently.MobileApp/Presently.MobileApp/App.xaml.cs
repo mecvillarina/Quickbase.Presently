@@ -43,7 +43,6 @@ namespace Presently.MobileApp
             RegisterWebServices(containerRegistry);
             RegisterManagers(containerRegistry);
             RegisterUI(containerRegistry);
-            containerRegistry.RegisterForNavigation<MainMasterDetailPage, MainMasterDetailPageViewModel>();
         }
 
         private void RegisterUI(IContainerRegistry containerRegistry)
@@ -51,7 +50,9 @@ namespace Presently.MobileApp
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<SplashScreenPage, SplashScreenPageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainMasterDetailPage, MainMasterDetailPageViewModel>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<AccountPage, AccountPageViewModel>();
         }
 
         private void RegisterManagers(IContainerRegistry containerRegistry)

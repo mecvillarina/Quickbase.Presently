@@ -68,7 +68,7 @@ namespace Presently.MobileApp.ViewModels
                 await RequestExceptionHandler.HandlerRequestTaskAsync(() => _authManager.Login(req));
                 await RequestExceptionHandler.HandlerRequestTaskAsync(() => _appUserManager.GetProfile());
 
-                await PageNavigator.NavigateAsync($"../{ViewNames.MainPage}");
+                await PageNavigator.NavigateAsync($"../{ViewNames.GetMainMasterPage()}");
             }
             catch (NoInternetConnectivityException)
             {

@@ -151,6 +151,15 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attendance Type.
+        /// </summary>
+        public static string LabelAttendanceType {
+            get {
+                return ResourceManager.GetString("LabelAttendanceType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Employee ID.
         /// </summary>
         public static string LabelEmployeeID {
@@ -160,11 +169,56 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First Name.
+        /// </summary>
+        public static string LabelFirstName {
+            get {
+                return ResourceManager.GetString("LabelFirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Geofencing.
+        /// </summary>
+        public static string LabelGeofencing {
+            get {
+                return ResourceManager.GetString("LabelGeofencing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Geotagging.
+        /// </summary>
+        public static string LabelGeotagging {
+            get {
+                return ResourceManager.GetString("LabelGeotagging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        public static string LabelLastName {
+            get {
+                return ResourceManager.GetString("LabelLastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Menu.
         /// </summary>
         public static string LabelMenu {
             get {
                 return ResourceManager.GetString("LabelMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Middle Name.
+        /// </summary>
+        public static string LabelMiddleName {
+            get {
+                return ResourceManager.GetString("LabelMiddleName", resourceCulture);
             }
         }
         
@@ -219,6 +273,15 @@ namespace Presently.MobileApp.Localization {
         public static string LoadingLoggingIn {
             get {
                 return ResourceManager.GetString("LoadingLoggingIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account.
+        /// </summary>
+        public static string TitleAccount {
+            get {
+                return ResourceManager.GetString("TitleAccount", resourceCulture);
             }
         }
     }

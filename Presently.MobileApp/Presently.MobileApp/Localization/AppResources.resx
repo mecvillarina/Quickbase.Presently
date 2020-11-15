@@ -147,11 +147,29 @@
   <data name="LabelAttendanceLogs" xml:space="preserve">
     <value>Attendance Logs</value>
   </data>
+  <data name="LabelAttendanceType" xml:space="preserve">
+    <value>Attendance Type</value>
+  </data>
   <data name="LabelEmployeeID" xml:space="preserve">
     <value>Employee ID</value>
   </data>
+  <data name="LabelFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="LabelGeofencing" xml:space="preserve">
+    <value>Geofencing</value>
+  </data>
+  <data name="LabelGeotagging" xml:space="preserve">
+    <value>Geotagging</value>
+  </data>
+  <data name="LabelLastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
   <data name="LabelMenu" xml:space="preserve">
     <value>Menu</value>
+  </data>
+  <data name="LabelMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
   </data>
   <data name="LabelNo" xml:space="preserve">
     <value>No</value>
@@ -170,5 +188,8 @@
   </data>
   <data name="LoadingLoggingIn" xml:space="preserve">
     <value>Logging In...</value>
+  </data>
+  <data name="TitleAccount" xml:space="preserve">
+    <value>Account</value>
   </data>
 </root>
