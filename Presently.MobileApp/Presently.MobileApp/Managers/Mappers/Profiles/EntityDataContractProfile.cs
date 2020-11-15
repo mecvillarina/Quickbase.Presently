@@ -11,8 +11,12 @@ namespace Presently.MobileApp.Managers.Mappers.Profiles
         public EntityDataContractProfile()
         {
             CreateMap<AuthLoginRequestEntity, AuthLoginRequestContract>();
+            CreateMap<AttendanceLogCreateRequestEntity, AttendanceLogCreateRequestContract>();
+
             CreateMap<AuthTokenDataContract, AuthTokenEntity>();
             CreateMap<EmployeeContract, AppUserEntity>();
+            CreateMap<EmployeeSiteContract, EmployeeSiteEntity>();
+            CreateMap<AttendanceLogContract, AttendanceLogEntity>();
         }
     }
 }

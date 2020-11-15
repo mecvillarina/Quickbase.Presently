@@ -55,11 +55,11 @@ namespace Presently.FunctionApp.Apis
             if (!string.IsNullOrEmpty(query))
             {
                 var recordId = Convert.ToInt64(query);
-                var purchaseOrder = _attendanceLogService.GetAttendanceLog(recordId, user.RecordId);
+                var attendanceLog = _attendanceLogService.GetAttendanceLog(recordId, user.RecordId);
 
-                if (purchaseOrder != null)
+                if (attendanceLog != null)
                 {
-                    return new OkObjectResult(purchaseOrder);
+                    return new OkObjectResult(attendanceLog);
                 }
             }
 

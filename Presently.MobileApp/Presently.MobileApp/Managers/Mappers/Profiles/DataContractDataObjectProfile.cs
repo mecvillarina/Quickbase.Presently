@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Presently.Common.DataContracts;
-using Presently.MobileApp.Managers.Entities;
 using Presently.MobileApp.Repositories.DataObjects;
-using Presently.MobileApp.WebServices.DataContracts;
 
 namespace Presently.MobileApp.Managers.Mappers.Profiles
 {
@@ -11,7 +9,8 @@ namespace Presently.MobileApp.Managers.Mappers.Profiles
         public DataContractDataObjectProfile()
         {
             CreateMap<EmployeeContract, AppUserDataObject>();
-
+            CreateMap<AttendanceLogContract, AttendanceLogDataObject>();
+            CreateMap<EmployeeSiteContract, EmployeeSiteDataObject>();
         }
     }
 }

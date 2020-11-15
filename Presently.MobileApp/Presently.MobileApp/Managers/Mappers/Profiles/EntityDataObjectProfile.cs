@@ -9,6 +9,8 @@ namespace Presently.MobileApp.Managers.Mappers.Profiles
         public EntityDataObjectProfile()
         {
             CreateMap<AppUserDataObject, AppUserEntity>();
+            CreateMap<EmployeeSiteDataObject, EmployeeSiteEntity>();
+            CreateMap<AttendanceLogDataObject, AttendanceLogEntity>();
         }
     }
 }

@@ -61,6 +61,8 @@ namespace Presently.MobileApp
             containerRegistry.RegisterSingleton<IInternalAuthManager, InternalAuthManager>();
             containerRegistry.RegisterSingleton<IAuthManager, AuthManager>();
             containerRegistry.RegisterSingleton<IAppUserManager, AppUserManager>();
+            containerRegistry.RegisterSingleton<IEmployeeManager, EmployeeManager>();
+            containerRegistry.RegisterSingleton<IAttendanceLogManager, AttendanceLogManager>();
         }
 
         private void RegisterWebServices(IContainerRegistry containerRegistry)
@@ -68,6 +70,8 @@ namespace Presently.MobileApp
             containerRegistry.Register<IHttpService, HttpService>();
             containerRegistry.Register<IAppHttpClient, AppHttpClient>();
             containerRegistry.RegisterSingleton<IAuthWebService, AuthWebService>();
+            containerRegistry.RegisterSingleton<IAttendanceLogWebService, AttendanceLogWebService>();
+            containerRegistry.RegisterSingleton<IEmployeeWebService, EmployeeWebService>();
         }
 
         private void RegisterRepositories(IContainerRegistry containerRegistry)
@@ -76,6 +80,8 @@ namespace Presently.MobileApp
             containerRegistry.RegisterSingleton<IKeyStoreRepository, KeyStoreRepository>();
             containerRegistry.RegisterSingleton<IInternalAuthRepository, InternalAuthRepository>();
             containerRegistry.RegisterSingleton<IAppUserRepository, AppUserRepository>();
+            containerRegistry.RegisterSingleton<IEmployeeSiteRepository, EmployeeSiteRepository>();
+            containerRegistry.RegisterSingleton<IAttendanceLogRepository, AttendanceLogRepository>();
         }
 
         private void RegisterUtilites(IContainerRegistry containerRegistry)

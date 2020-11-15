@@ -19,12 +19,16 @@ namespace Presently.MobileApp.Repositories.Database
             {
                 DB = connectionFactory.CreateConnection(DBName);
                 DB.CreateTable<AppUserDataObject>();
+                DB.CreateTable<AttendanceLogDataObject>();
+                DB.CreateTable<EmployeeSiteDataObject>();
             }
         }
 
         public void DeleteAll()
         {
             DB.DeleteAll<AppUserDataObject>();
+            DB.DeleteAll<AttendanceLogDataObject>();
+            DB.DeleteAll<EmployeeSiteDataObject>();
         }
 
         public void BulkInsert<T>(IEnumerable<T> list) where T : class, IDataObjectBase, new()
