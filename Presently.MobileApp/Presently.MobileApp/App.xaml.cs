@@ -65,6 +65,7 @@ namespace Presently.MobileApp
             containerRegistry.RegisterSingleton<IAppUserManager, AppUserManager>();
             containerRegistry.RegisterSingleton<IEmployeeManager, EmployeeManager>();
             containerRegistry.RegisterSingleton<IAttendanceLogManager, AttendanceLogManager>();
+            containerRegistry.RegisterSingleton<ILocationManager, LocationManager>();
         }
 
         private void RegisterWebServices(IContainerRegistry containerRegistry)
@@ -74,6 +75,7 @@ namespace Presently.MobileApp
             containerRegistry.RegisterSingleton<IAuthWebService, AuthWebService>();
             containerRegistry.RegisterSingleton<IAttendanceLogWebService, AttendanceLogWebService>();
             containerRegistry.RegisterSingleton<IEmployeeWebService, EmployeeWebService>();
+            containerRegistry.RegisterSingleton<ILocationWebService, LocationWebService>();
         }
 
         private void RegisterRepositories(IContainerRegistry containerRegistry)

@@ -17,6 +17,7 @@ namespace Presently.MobileApp.Managers.Mappers.Profiles
             CreateMap<EmployeeContract, AppUserEntity>();
             CreateMap<EmployeeSiteContract, EmployeeSiteEntity>();
             CreateMap<AttendanceLogContract, AttendanceLogEntity>();
+            CreateMap<LocationAddressEntity, LocationAddressContract>();
         }
     }
 }

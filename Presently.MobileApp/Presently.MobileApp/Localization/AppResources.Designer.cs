@@ -79,6 +79,33 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        public static string ButtonSubmit {
+            get {
+                return ResourceManager.GetString("ButtonSubmit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot Acquire Current Location Address..
+        /// </summary>
+        public static string Error_CantAcquireCurrentLocationAddress {
+            get {
+                return ResourceManager.GetString("Error_CantAcquireCurrentLocationAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot Acquire Selected Location Address..
+        /// </summary>
+        public static string Error_CantAcquireSelectedLocationLocationAddress {
+            get {
+                return ResourceManager.GetString("Error_CantAcquireSelectedLocationLocationAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unknown error occured..
         /// </summary>
         public static string Error_DefaultServerError {
@@ -282,6 +309,24 @@ namespace Presently.MobileApp.Localization {
         public static string LabelYes {
             get {
                 return ResourceManager.GetString("LabelYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fetching Current Location....
+        /// </summary>
+        public static string LoadingFetchingCurrentLocation {
+            get {
+                return ResourceManager.GetString("LoadingFetchingCurrentLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fetching Selected Location Address....
+        /// </summary>
+        public static string LoadingFetchingSelectedLocationAddress {
+            get {
+                return ResourceManager.GetString("LoadingFetchingSelectedLocationAddress", resourceCulture);
             }
         }
         

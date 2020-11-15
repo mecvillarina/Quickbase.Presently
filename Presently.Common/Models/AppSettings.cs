@@ -8,5 +8,6 @@
         public string QuickbaseUserToken { get; set; }
         public string QuickbaseRealmHostname { get; set; }
         public string QuickbaseApiBaseUrl { get; set; }
+        public string LocationIqApiKey { get; set; }
     }
 }

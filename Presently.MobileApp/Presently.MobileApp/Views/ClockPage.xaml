@@ -2,6 +2,9 @@
 <views:MobileContentPageBase x:Class="Presently.MobileApp.Views.ClockPage"
                              xmlns="http://xamarin.com/schemas/2014/forms"
                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                             xmlns:aieffects="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+                             xmlns:i18n="clr-namespace:Presently.MobileApp.Localization"
+                             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
                              xmlns:prism="http://prismlibrary.com"
                              xmlns:views="clr-namespace:Presently.MobileApp.Views"
                              prism:ViewModelLocator.AutowireViewModel="True"
@@ -36,6 +39,77 @@
                        VerticalTextAlignment="Center" />
             </Grid>
 
+            <Grid Grid.Row="1"
+                  BackgroundColor="{StaticResource PrimaryBackgroundColor}">
+
+                <maps:Map x:Name="map"
+                          VerticalOptions="FillAndExpand" />
+
+                <StackLayout Margin="25,70,25,25"
+                             aieffects:Border.Color="{StaticResource BorderLineColor}"
+                             aieffects:Border.Radius="1"
+                             BackgroundColor="White"
+                             Spacing="0"
+                             VerticalOptions="StartAndExpand">
+
+                    <Grid Padding="15"
+                          ColumnDefinitions="Auto, *"
+                          ColumnSpacing="10">
+                        <Image HeightRequest="20"
+                               Source="icon_pin_blue.png" />
+
+                        <Label Grid.Column="1"
+                               LineBreakMode="TailTruncation"
+                               MaxLines="1"
+                               Text="{Binding CurrentLocationName}"
+                               VerticalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center" />
+                    </Grid>
+
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="2"
+                  BackgroundColor="{StaticResource LightGrayColor}"
+                  HeightRequest="64">
+
+                <Grid.Triggers>
+                    <DataTrigger Binding="{Binding IsSubmitCommandEnabled}"
+                                 TargetType="Grid"
+                                 Value="False">
+                        <Setter Property="BackgroundColor" Value="{StaticResource LightGrayColor}" />
+                    </DataTrigger>
+
+                    <DataTrigger Binding="{Binding IsSubmitCommandEnabled}"
+                                 TargetType="Grid"
+                                 Value="True">
+                        <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
+                    </DataTrigger>
+
+                </Grid.Triggers>
+
+                <StackLayout Padding="30,0"
+                             HorizontalOptions="EndAndExpand"
+                             Orientation="Horizontal"
+                             Spacing="10"
+                             VerticalOptions="FillAndExpand">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SubmitCommand}"
+                                              NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                    <Label FontSize="{StaticResource MediumFontSize}"
+                           Text="{x:Static i18n:AppResources.ButtonSubmit}"
+                           TextColor="{StaticResource BaseButtonTextColor}"
+                           VerticalOptions="FillAndExpand"
+                           VerticalTextAlignment="Center" />
+
+                    <Label FontFamily="FontAwesomeSolid"
+                           FontSize="{StaticResource MediumFontSize}"
+                           Text="{StaticResource IconArrowRight}"
+                           TextColor="{StaticResource BaseButtonTextColor}"
+                           VerticalOptions="FillAndExpand"
+                           VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
         </Grid>
     </views:MobileContentPageBase.Content>
 </views:MobileContentPageBase>

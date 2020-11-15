@@ -123,6 +123,15 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Okay</value>
   </data>
+  <data name="ButtonSubmit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Error_CantAcquireCurrentLocationAddress" xml:space="preserve">
+    <value>Cannot Acquire Current Location Address.</value>
+  </data>
+  <data name="Error_CantAcquireSelectedLocationLocationAddress" xml:space="preserve">
+    <value>Cannot Acquire Selected Location Address.</value>
+  </data>
   <data name="Error_DefaultServerError" xml:space="preserve">
     <value>Unknown error occured.</value>
   </data>
@@ -191,6 +200,12 @@
   </data>
   <data name="LabelYes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="LoadingFetchingCurrentLocation" xml:space="preserve">
+    <value>Fetching Current Location...</value>
+  </data>
+  <data name="LoadingFetchingSelectedLocationAddress" xml:space="preserve">
+    <value>Fetching Selected Location Address...</value>
   </data>
   <data name="LoadingLoggingIn" xml:space="preserve">
     <value>Logging In...</value>

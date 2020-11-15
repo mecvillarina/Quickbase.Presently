@@ -134,5 +134,23 @@
       <Name>Presently.MobileApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\icon_pin_small_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\icon_pin_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\icon_pin_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\icon_pin_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\icon_pin_small_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\icon_pin_small_gray.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
