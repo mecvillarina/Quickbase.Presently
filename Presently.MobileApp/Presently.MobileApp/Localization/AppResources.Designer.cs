@@ -250,6 +250,33 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Location Name.
+        /// </summary>
+        public static string LabelLocationName {
+            get {
+                return ResourceManager.GetString("LabelLocationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log Time.
+        /// </summary>
+        public static string LabelLogTime {
+            get {
+                return ResourceManager.GetString("LabelLogTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log Type.
+        /// </summary>
+        public static string LabelLogType {
+            get {
+                return ResourceManager.GetString("LabelLogType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Menu.
         /// </summary>
         public static string LabelMenu {
@@ -313,11 +340,29 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Location is outside the geofence.
+        /// </summary>
+        public static string LabelVerifyLocationOutsideMessage {
+            get {
+                return ResourceManager.GetString("LabelVerifyLocationOutsideMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Yes.
         /// </summary>
         public static string LabelYes {
             get {
                 return ResourceManager.GetString("LabelYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fetching....
+        /// </summary>
+        public static string LoadingFetching {
+            get {
+                return ResourceManager.GetString("LoadingFetching", resourceCulture);
             }
         }
         

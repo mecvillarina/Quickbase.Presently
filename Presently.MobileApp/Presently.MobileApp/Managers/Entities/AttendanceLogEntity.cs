@@ -12,5 +12,7 @@ namespace Presently.MobileApp.Managers.Entities
         public DateTimeOffset LogTime { get; set; }
         public string LogType { get; set; }
         public string Status { get; set; }
+
+        public string LogTimeDisplay => LogTime.ToLocalTime().ToString("MM-dd-yyyy hh:mm tt");
     }
 }

@@ -5,6 +5,7 @@
                              xmlns:aieffects="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
                              xmlns:i18n="clr-namespace:Presently.MobileApp.Localization"
                              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+                             xmlns:mapsBinding="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
                              xmlns:prism="http://prismlibrary.com"
                              xmlns:views="clr-namespace:Presently.MobileApp.Views"
                              prism:ViewModelLocator.AutowireViewModel="True"
@@ -43,7 +44,12 @@
                   BackgroundColor="{StaticResource PrimaryBackgroundColor}">
 
                 <maps:Map x:Name="map"
-                          VerticalOptions="FillAndExpand" />
+                          VerticalOptions="FillAndExpand">
+
+                    <maps:Map.Behaviors>
+                        <mapsBinding:BindingCirclesBehavior Value="{Binding Geofences}" />
+                    </maps:Map.Behaviors>
+                </maps:Map>
 
                 <StackLayout Margin="25,70,25,25"
                              aieffects:Border.Color="{StaticResource BorderLineColor}"

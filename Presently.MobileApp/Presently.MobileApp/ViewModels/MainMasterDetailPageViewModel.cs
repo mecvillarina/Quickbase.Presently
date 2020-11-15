@@ -2,6 +2,7 @@
 using Presently.MobileApp.Common.Constants;
 using Presently.MobileApp.Localization;
 using Presently.MobileApp.Managers.Abstractions;
+using Presently.MobileApp.Models;
 using Presently.MobileApp.Utilities.Abstractions;
 using Prism.Commands;
 using Prism.Events;
@@ -24,8 +25,11 @@ namespace Presently.MobileApp.ViewModels
             _appManager = appManager;
             _appUserManager = appUserManager;
 
+            AccountCommmand = new DelegateCommand(async () => await OnAccount());
+            AttendanceLogCommmand = new DelegateCommand(async () => await OnAttendanceLog());
             LogoutCommand = new DelegateCommand(async () => await OnLogout());
         }
+
 
         private string _displayName;
         public string DisplayName
@@ -41,6 +45,8 @@ namespace Presently.MobileApp.ViewModels
             set => SetProperty(ref _displayNameInitial, value);
         }
 
+        public DelegateCommand AttendanceLogCommmand { get; private set; }
+        public DelegateCommand AccountCommmand { get; private set; }
         public DelegateCommand LogoutCommand { get; private set; }
 
         public override void Initialize(INavigationParameters parameters)
@@ -49,6 +55,11 @@ namespace Presently.MobileApp.ViewModels
 
             SetProfile();
         }
+
+
+        private Task OnAccount() => PageNavigator.NavigateAsync($"{ViewNames.NavigationPage}/{ViewNames.AccountPage}", null);
+
+        private Task OnAttendanceLog() => PageNavigator.NavigateAsync($"{ViewNames.NavigationPage}/{ViewNames.AttendanceLogPage}", null);
 
         private async Task OnLogout()
         {

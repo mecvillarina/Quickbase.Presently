@@ -7,4 +7,65 @@
                              xmlns:views="clr-namespace:Presently.MobileApp.Views"
                              prism:ViewModelLocator.AutowireViewModel="True"
                              BackgroundColor="{StaticResource SecondaryBackgroundColor}"
-                             ControlTemplate="{StaticResource MasterDetailPageControlTemplate}" />
+                             ControlTemplate="{StaticResource MasterDetailPageControlTemplate}">
+
+    <views:MobileContentPageBase.Content>
+        <Grid RowSpacing="0">
+            <Grid Padding="25"
+                  BackgroundColor="{StaticResource PrimaryBackgroundColor}">
+                <CollectionView BackgroundColor="{StaticResource PrimaryBackgroundColor}"
+                                ItemsSource="{Binding Logs}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="5"
+                                           Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10"
+                                         BackgroundColor="{StaticResource SecondaryBackgroundColor}">
+                                <Grid ColumnDefinitions="*,*">
+                                    <StackLayout Spacing="5">
+                                        <Label Style="{StaticResource ControlTitleLabelStyle}"
+                                               Text="{x:Static i18n:AppResources.LabelLogType}" />
+
+                                        <Label FontSize="{StaticResource LargeFontSize}"
+                                               Style="{StaticResource ControlTitleLabelStyle}"
+                                               Text="{Binding LogType}"
+                                               TextColor="{StaticResource PrimaryColor1}" />
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Column="1"
+                                                 Spacing="5">
+                                        <Label Style="{StaticResource ControlTitleLabelStyle}"
+                                               Text="{x:Static i18n:AppResources.LabelLogTime}" />
+
+                                        <Label FontSize="{StaticResource LargeFontSize}"
+                                               Style="{StaticResource ControlTitleLabelStyle}"
+                                               Text="{Binding LogTimeDisplay}"
+                                               TextColor="{StaticResource PrimaryColor1}" />
+                                    </StackLayout>
+                                </Grid>
+
+                                <StackLayout Spacing="5">
+                                    <Label Style="{StaticResource ControlTitleLabelStyle}"
+                                           Text="{x:Static i18n:AppResources.LabelLocationName}" />
+
+                                    <Label FontSize="{StaticResource LargeFontSize}"
+                                           MaxLines="2"
+                                           Style="{StaticResource ControlTitleLabelStyle}"
+                                           Text="{Binding LocationName}"
+                                           TextColor="{StaticResource PrimaryColor1}" />
+                                </StackLayout>
+
+
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </Grid>
+        </Grid>
+    </views:MobileContentPageBase.Content>
+</views:MobileContentPageBase>

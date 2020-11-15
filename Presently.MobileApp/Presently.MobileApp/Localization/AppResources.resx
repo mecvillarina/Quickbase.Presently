@@ -180,6 +180,15 @@
   <data name="LabelLastName" xml:space="preserve">
     <value>Last Name</value>
   </data>
+  <data name="LabelLocationName" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="LabelLogTime" xml:space="preserve">
+    <value>Log Time</value>
+  </data>
+  <data name="LabelLogType" xml:space="preserve">
+    <value>Log Type</value>
+  </data>
   <data name="LabelMenu" xml:space="preserve">
     <value>Menu</value>
   </data>
@@ -201,8 +210,14 @@
   <data name="LabelSuccessMessage" xml:space="preserve">
     <value>You have successfully {0}.</value>
   </data>
+  <data name="LabelVerifyLocationOutsideMessage" xml:space="preserve">
+    <value>Location is outside the geofence</value>
+  </data>
   <data name="LabelYes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="LoadingFetching" xml:space="preserve">
+    <value>Fetching...</value>
   </data>
   <data name="LoadingFetchingCurrentLocation" xml:space="preserve">
     <value>Fetching Current Location...</value>

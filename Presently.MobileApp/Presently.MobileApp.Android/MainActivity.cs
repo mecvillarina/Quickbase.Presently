@@ -47,6 +47,8 @@ namespace Presently.MobileApp.Droid
             };
 
             Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
+            Xamarin.FormsGoogleMapsBindings.Init();
+
             Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
         }
 

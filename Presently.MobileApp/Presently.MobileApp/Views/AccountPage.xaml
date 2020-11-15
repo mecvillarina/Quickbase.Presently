@@ -8,6 +8,7 @@
                              prism:ViewModelLocator.AutowireViewModel="True"
                              BackgroundColor="{StaticResource SecondaryBackgroundColor}"
                              ControlTemplate="{StaticResource MasterDetailPageControlTemplate}">
+    
     <views:MobileContentPageBase.Content>
         <Grid RowSpacing="0">
             <ScrollView Margin="20,10"

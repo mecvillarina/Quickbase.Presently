@@ -56,7 +56,7 @@
                     <StackLayout Orientation="Horizontal"
                                  Spacing="15">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding TestCommand}" />
+                            <TapGestureRecognizer Command="{Binding AccountCommmand}" />
                         </StackLayout.GestureRecognizers>
 
                         <Label FontFamily="FontAwesomeSolid"
@@ -78,7 +78,7 @@
                                  Orientation="Horizontal"
                                  Spacing="15">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding TestCommand}" />
+                            <TapGestureRecognizer Command="{Binding AttendanceLogCommmand}" />
                         </StackLayout.GestureRecognizers>
 
                         <Label FontFamily="FontAwesomeSolid"
