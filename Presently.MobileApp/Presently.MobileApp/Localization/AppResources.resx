@@ -120,6 +120,12 @@
   <data name="ButtonLogin" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>Okay</value>
+  </data>
+  <data name="Error_DefaultServerError" xml:space="preserve">
+    <value>Unknown error occured.</value>
+  </data>
   <data name="Error_NoInternetConnectivity" xml:space="preserve">
     <value>Make sure that Wi-Fi or mobile data is turned on then try again.</value>
   </data>
@@ -137,5 +143,8 @@
   </data>
   <data name="LabelEmployeeID" xml:space="preserve">
     <value>Employee ID</value>
+  </data>
+  <data name="LoadingLoggingIn" xml:space="preserve">
+    <value>Logging In...</value>
   </data>
 </root>

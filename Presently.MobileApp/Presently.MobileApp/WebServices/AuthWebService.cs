@@ -1,4 +1,5 @@
-﻿using Presently.Common.DataContracts.Requests;
+﻿using Presently.Common.DataContracts;
+using Presently.Common.DataContracts.Requests;
 using Presently.MobileApp.Common.Constants;
 using Presently.MobileApp.WebServices.Abstractions;
 using Presently.MobileApp.WebServices.Base;
@@ -14,5 +15,6 @@ namespace Presently.MobileApp.WebServices
         }
 
         public Task<AuthTokenDataContract> Login(AuthLoginRequestContract contract) => PostAsync<AuthTokenDataContract>(ServerEndpoint.AuthLogin, contract);
+        public Task<EmployeeContract> GetProfile(string accessToken) => GetAsync<EmployeeContract>(ServerEndpoint.AuthGetProfile, null, accessToken);
     }
 }

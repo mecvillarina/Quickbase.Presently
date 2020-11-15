@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Presently.MobileApp.Managers.Entities;
+using Presently.MobileApp.Repositories.DataObjects;
 
 namespace Presently.MobileApp.Managers.Mappers.Profiles
 {
@@ -6,6 +8,7 @@ namespace Presently.MobileApp.Managers.Mappers.Profiles
     {
         public EntityDataObjectProfile()
         {
+            CreateMap<AppUserDataObject, AppUserEntity>();
         }
     }
 }

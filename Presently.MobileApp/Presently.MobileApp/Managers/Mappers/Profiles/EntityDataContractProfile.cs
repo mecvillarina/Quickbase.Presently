@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using Presently.Common.DataContracts;
+using Presently.Common.DataContracts.Requests;
+using Presently.MobileApp.Managers.Entities;
+using Presently.MobileApp.WebServices.DataContracts;
 
 namespace Presently.MobileApp.Managers.Mappers.Profiles
 {
@@ -6,7 +10,9 @@ namespace Presently.MobileApp.Managers.Mappers.Profiles
     {
         public EntityDataContractProfile()
         {
-
+            CreateMap<AuthLoginRequestEntity, AuthLoginRequestContract>();
+            CreateMap<AuthTokenDataContract, AuthTokenEntity>();
+            CreateMap<EmployeeContract, AppUserEntity>();
         }
     }
 }

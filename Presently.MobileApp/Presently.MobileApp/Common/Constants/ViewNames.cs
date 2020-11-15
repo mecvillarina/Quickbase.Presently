@@ -7,10 +7,11 @@
         public const string MainPage = nameof(MainPage);
         public const string LoginPage = nameof(LoginPage);
 
-        //public static string GetMainMasterPage()
-        //{
-        //    return $"{MainMasterDetailPage}/{NavigationPage}/{MainMapPage}";
-        //}
+        public static string GetMainMasterPage()
+        {
+            return $"{MainPage}";
+            //return $"{MainMasterDetailPage}/{NavigationPage}/{MainMapPage}";
+        }
 
         //public static string ResetLandingPage()
         //{

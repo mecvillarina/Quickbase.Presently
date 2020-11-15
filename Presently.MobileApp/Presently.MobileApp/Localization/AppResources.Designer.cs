@@ -70,6 +70,24 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Okay.
+        /// </summary>
+        public static string ButtonOk {
+            get {
+                return ResourceManager.GetString("ButtonOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown error occured..
+        /// </summary>
+        public static string Error_DefaultServerError {
+            get {
+                return ResourceManager.GetString("Error_DefaultServerError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Make sure that Wi-Fi or mobile data is turned on then try again..
         /// </summary>
         public static string Error_NoInternetConnectivity {
@@ -120,6 +138,15 @@ namespace Presently.MobileApp.Localization {
         public static string LabelEmployeeID {
             get {
                 return ResourceManager.GetString("LabelEmployeeID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logging In....
+        /// </summary>
+        public static string LoadingLoggingIn {
+            get {
+                return ResourceManager.GetString("LoadingLoggingIn", resourceCulture);
             }
         }
     }

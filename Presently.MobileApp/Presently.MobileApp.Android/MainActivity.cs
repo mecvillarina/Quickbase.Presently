@@ -30,7 +30,7 @@ namespace Presently.MobileApp.Droid
 
             InitLibraries(savedInstanceState);
             InitializeContainer();
-            LoadApplication(new App(new AndroidInitializer()));
+            LoadApplication(_app);
         }
 
         private void InitLibraries(Bundle savedInstanceState)
