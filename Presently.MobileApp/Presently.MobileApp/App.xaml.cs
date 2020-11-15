@@ -43,6 +43,7 @@ namespace Presently.MobileApp
             RegisterWebServices(containerRegistry);
             RegisterManagers(containerRegistry);
             RegisterUI(containerRegistry);
+            containerRegistry.RegisterForNavigation<MainMasterDetailPage, MainMasterDetailPageViewModel>();
         }
 
         private void RegisterUI(IContainerRegistry containerRegistry)
@@ -55,9 +56,10 @@ namespace Presently.MobileApp
 
         private void RegisterManagers(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<IAppManager, AppManager>();
             containerRegistry.RegisterSingleton<IInternalAuthManager, InternalAuthManager>();
             containerRegistry.RegisterSingleton<IAuthManager, AuthManager>();
-            containerRegistry.RegisterSingleton<IAppManager, AppManager>();
+            containerRegistry.RegisterSingleton<IAppUserManager, AppUserManager>();
         }
 
         private void RegisterWebServices(IContainerRegistry containerRegistry)

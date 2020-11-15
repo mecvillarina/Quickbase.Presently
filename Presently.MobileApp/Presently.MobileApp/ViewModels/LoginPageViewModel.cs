@@ -15,14 +15,17 @@ namespace Presently.MobileApp.ViewModels
     public class LoginPageViewModel : ViewModelBase
     {
         private readonly IAuthManager _authManager;
+        private readonly IAppUserManager _appUserManager;
 
         public LoginPageViewModel(IPageNavigator pageNavigator,
             ILogger logger,
             IUserDialogs userDialogs,
             IRequestExceptionHandler requestExceptionHandler,
-            IAuthManager authManager) : base(pageNavigator, logger, userDialogs, requestExceptionHandler)
+            IAuthManager authManager,
+            IAppUserManager appUserManager) : base(pageNavigator, logger, userDialogs, requestExceptionHandler)
         {
             _authManager = authManager;
+            _appUserManager = appUserManager;
 
             LoginCommand = new DelegateCommand(async () => await OnLogin(), () => OnLoginCanExecute())
                 .ObservesProperty(() => EmployeeId)
@@ -63,7 +66,7 @@ namespace Presently.MobileApp.ViewModels
                 };
 
                 await RequestExceptionHandler.HandlerRequestTaskAsync(() => _authManager.Login(req));
-                await RequestExceptionHandler.HandlerRequestTaskAsync(() => _authManager.GetProfile());
+                await RequestExceptionHandler.HandlerRequestTaskAsync(() => _appUserManager.GetProfile());
 
                 await PageNavigator.NavigateAsync($"../{ViewNames.MainPage}");
             }

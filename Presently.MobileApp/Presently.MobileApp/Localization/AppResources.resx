@@ -141,8 +141,32 @@
   <data name="LabelAccessCode" xml:space="preserve">
     <value>Access Code</value>
   </data>
+  <data name="LabelAccount" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="LabelAttendanceLogs" xml:space="preserve">
+    <value>Attendance Logs</value>
+  </data>
   <data name="LabelEmployeeID" xml:space="preserve">
     <value>Employee ID</value>
+  </data>
+  <data name="LabelMenu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="LabelSignout" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="LabelSignoutMessage" xml:space="preserve">
+    <value>Are you want to sign out?</value>
+  </data>
+  <data name="LabelSignoutTitle" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="LabelYes" xml:space="preserve">
+    <value>Yes</value>
   </data>
   <data name="LoadingLoggingIn" xml:space="preserve">
     <value>Logging In...</value>

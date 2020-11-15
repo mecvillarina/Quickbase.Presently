@@ -6,16 +6,16 @@
         public const string SplashScreenPage = nameof(SplashScreenPage);
         public const string MainPage = nameof(MainPage);
         public const string LoginPage = nameof(LoginPage);
+        public const string MainMasterDetailPage = nameof(MainMasterDetailPage);
 
         public static string GetMainMasterPage()
         {
-            return $"{MainPage}";
-            //return $"{MainMasterDetailPage}/{NavigationPage}/{MainMapPage}";
+            return $"{MainMasterDetailPage}/{NavigationPage}/{MainPage}";
         }
 
-        //public static string ResetLandingPage()
-        //{
-        //    return $"/{NavigationPage}/{SplashScreenPage}";
-        //}
+        public static string ResetLandingPage()
+        {
+            return $"/{NavigationPage}/{SplashScreenPage}";
+        }
     }
 }

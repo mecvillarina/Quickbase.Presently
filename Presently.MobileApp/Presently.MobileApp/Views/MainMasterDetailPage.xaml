@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage x:Class="Presently.MobileApp.Views.MainMasterDetailPage"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:i18n="clr-namespace:Presently.MobileApp.Localization"
+                  xmlns:prism="http://prismlibrary.com"
+                  xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  IsPresented="{Binding IsPresented, Mode=TwoWay}">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="{x:Static i18n:AppResources.LabelMenu}"
+                     Padding="0">
+            <Grid Padding="0,30"
+                  RowDefinitions="Auto,Auto,*,Auto">
+
+                <StackLayout Margin="0,50,0,25"
+                             Padding="30,0"
+                             Spacing="20">
+                    <yummy:PancakeView Margin="0"
+                                       Padding="0"
+                                       BackgroundColor="{StaticResource PrimaryColor1}"
+                                       CornerRadius="40"
+                                       HeightRequest="80"
+                                       HorizontalOptions="CenterAndExpand"
+                                       WidthRequest="80">
+                        <yummy:PancakeView.Border>
+                            <yummy:Border Thickness="0" />
+                        </yummy:PancakeView.Border>
+
+                        <Label FontSize="{StaticResource XLargeFontSize}"
+                               HorizontalTextAlignment="Center"
+                               Text="{Binding DisplayNameInitial}"
+                               TextColor="White"
+                               TextTransform="Uppercase"
+                               VerticalTextAlignment="Center" />
+                    </yummy:PancakeView>
+
+                    <Label FontSize="{StaticResource LargeFontSize}"
+                           HorizontalTextAlignment="Center"
+                           Text="{Binding DisplayName}"
+                           TextColor="{StaticResource PrimaryColor1}" />
+                </StackLayout>
+
+                <BoxView Grid.Row="1"
+                         Margin="0,30"
+                         BackgroundColor="{StaticResource LightGrayColor}"
+                         HeightRequest="0.6" />
+
+                <Grid Grid.Row="2"
+                      Padding="30,0"
+                      RowDefinitions="Auto,Auto,Auto"
+                      RowSpacing="20">
+
+                    <StackLayout Orientation="Horizontal"
+                                 Spacing="15">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TestCommand}" />
+                        </StackLayout.GestureRecognizers>
+
+                        <Label FontFamily="FontAwesomeSolid"
+                               FontSize="{StaticResource LargeFontSize}"
+                               Text="{StaticResource IconUserCircle}"
+                               TextColor="{StaticResource LightGrayColor}"
+                               VerticalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center" />
+
+                        <Label FontSize="{StaticResource MediumFontSize}"
+                               Text="{x:Static i18n:AppResources.LabelAccount}"
+                               TextColor="{StaticResource LightGrayTextColor}"
+                               TextTransform="Uppercase"
+                               VerticalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1"
+                                 Orientation="Horizontal"
+                                 Spacing="15">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TestCommand}" />
+                        </StackLayout.GestureRecognizers>
+
+                        <Label FontFamily="FontAwesomeSolid"
+                               FontSize="{StaticResource LargeFontSize}"
+                               Text="{StaticResource IconHistory}"
+                               TextColor="{StaticResource LightGrayColor}"
+                               VerticalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center" />
+
+                        <Label FontSize="{StaticResource MediumFontSize}"
+                               Text="{x:Static i18n:AppResources.LabelAttendanceLogs}"
+                               TextColor="{StaticResource LightGrayTextColor}"
+                               TextTransform="Uppercase"
+                               VerticalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center" />
+                    </StackLayout>
+
+                </Grid>
+
+                <StackLayout Grid.Row="3"
+                             Padding="30,0"
+                             Orientation="Horizontal"
+                             Spacing="15">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LogoutCommand}" />
+                    </StackLayout.GestureRecognizers>
+
+                    <Label FontFamily="FontAwesomeSolid"
+                           FontSize="{StaticResource LargeFontSize}"
+                           Text="{StaticResource IconSignout}"
+                           TextColor="{StaticResource LightGrayColor}"
+                           VerticalOptions="FillAndExpand"
+                           VerticalTextAlignment="Center" />
+
+                    <Label FontSize="{StaticResource MediumFontSize}"
+                           Text="{x:Static i18n:AppResources.LabelSignout}"
+                           TextColor="{StaticResource LightGrayTextColor}"
+                           TextTransform="Uppercase"
+                           VerticalOptions="FillAndExpand"
+                           VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>

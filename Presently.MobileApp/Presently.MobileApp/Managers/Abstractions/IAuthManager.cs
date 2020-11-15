@@ -8,7 +8,5 @@ namespace Presently.MobileApp.Managers.Abstractions
         void ClearAuthData();
         Task<bool> IsSessionValid();
         Task Login(AuthLoginRequestEntity reqEntity);
-        Task GetProfile();
-        AppUserEntity GetProfileLocally();
     }
 }

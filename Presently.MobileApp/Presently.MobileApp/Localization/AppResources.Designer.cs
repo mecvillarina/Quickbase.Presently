@@ -133,11 +133,83 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account.
+        /// </summary>
+        public static string LabelAccount {
+            get {
+                return ResourceManager.GetString("LabelAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attendance Logs.
+        /// </summary>
+        public static string LabelAttendanceLogs {
+            get {
+                return ResourceManager.GetString("LabelAttendanceLogs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Employee ID.
         /// </summary>
         public static string LabelEmployeeID {
             get {
                 return ResourceManager.GetString("LabelEmployeeID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menu.
+        /// </summary>
+        public static string LabelMenu {
+            get {
+                return ResourceManager.GetString("LabelMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        public static string LabelNo {
+            get {
+                return ResourceManager.GetString("LabelNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sign out.
+        /// </summary>
+        public static string LabelSignout {
+            get {
+                return ResourceManager.GetString("LabelSignout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you want to sign out?.
+        /// </summary>
+        public static string LabelSignoutMessage {
+            get {
+                return ResourceManager.GetString("LabelSignoutMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sign out.
+        /// </summary>
+        public static string LabelSignoutTitle {
+            get {
+                return ResourceManager.GetString("LabelSignoutTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string LabelYes {
+            get {
+                return ResourceManager.GetString("LabelYes", resourceCulture);
             }
         }
         
