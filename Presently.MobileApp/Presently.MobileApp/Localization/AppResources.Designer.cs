@@ -304,6 +304,15 @@ namespace Presently.MobileApp.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have successfully {0}..
+        /// </summary>
+        public static string LabelSuccessMessage {
+            get {
+                return ResourceManager.GetString("LabelSuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Yes.
         /// </summary>
         public static string LabelYes {
@@ -336,6 +345,15 @@ namespace Presently.MobileApp.Localization {
         public static string LoadingLoggingIn {
             get {
                 return ResourceManager.GetString("LoadingLoggingIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submitting.
+        /// </summary>
+        public static string LoadingSubmitting {
+            get {
+                return ResourceManager.GetString("LoadingSubmitting", resourceCulture);
             }
         }
         

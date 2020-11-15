@@ -198,6 +198,9 @@
   <data name="LabelSignoutTitle" xml:space="preserve">
     <value>Sign out</value>
   </data>
+  <data name="LabelSuccessMessage" xml:space="preserve">
+    <value>You have successfully {0}.</value>
+  </data>
   <data name="LabelYes" xml:space="preserve">
     <value>Yes</value>
   </data>
@@ -209,6 +212,9 @@
   </data>
   <data name="LoadingLoggingIn" xml:space="preserve">
     <value>Logging In...</value>
+  </data>
+  <data name="LoadingSubmitting" xml:space="preserve">
+    <value>Submitting</value>
   </data>
   <data name="TitleAccount" xml:space="preserve">
     <value>Home</value>

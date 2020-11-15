@@ -1,7 +1,9 @@
 ﻿using Acr.UserDialogs;
 using Presently.MobileApp.Common.Constants;
+using Presently.MobileApp.Common.Exceptions;
 using Presently.MobileApp.Localization;
 using Presently.MobileApp.Managers.Abstractions;
+using Presently.MobileApp.Managers.Entities;
 using Presently.MobileApp.Models;
 using Presently.MobileApp.PubSubEvents;
 using Presently.MobileApp.Utilities.Abstractions;
@@ -20,6 +22,7 @@ namespace Presently.MobileApp.ViewModels
     {
         private readonly ILocationManager _locationManager;
         private readonly IGeolocation _geolocation;
+        private readonly IAttendanceLogManager _attendanceLogManager;
         private readonly SubscriptionToken _mapDragPinNewLocationEventToken;
 
         public ClockPageViewModel(IPageNavigator pageNavigator,
@@ -28,10 +31,12 @@ namespace Presently.MobileApp.ViewModels
             IRequestExceptionHandler requestExceptionHandler,
             IEventAggregator eventAggregator,
             ILocationManager locationManager,
-            IGeolocation geolocation) : base(pageNavigator, logger, userDialogs, requestExceptionHandler, eventAggregator)
+            IGeolocation geolocation,
+            IAttendanceLogManager attendanceLogManager) : base(pageNavigator, logger, userDialogs, requestExceptionHandler, eventAggregator)
         {
             _locationManager = locationManager;
             _geolocation = geolocation;
+            _attendanceLogManager = attendanceLogManager;
 
             BackCommand = new DelegateCommand(async () => await PageNavigator.GoBackAsync());
             SubmitCommand = new DelegateCommand(async () => await OnSubmit(), () => OnSubmitCanExecute()).ObservesProperty(() => CurrentPostion).ObservesProperty(() => CurrentLocationName);
@@ -39,8 +44,8 @@ namespace Presently.MobileApp.ViewModels
             _mapDragPinNewLocationEventToken = EventAggregator.GetEvent<MapDragPinNewLocationEvent>().Subscribe(async (pos) => await SetPoint(pos.Latitude, pos.Longitude));
         }
 
-
         private Position CurrentPostion { get; set; }
+        private string _logType = string.Empty;
 
         private bool _isSubmitCommandEnabled;
         public bool IsSubmitCommandEnabled
@@ -66,7 +71,50 @@ namespace Presently.MobileApp.ViewModels
 
         private async Task OnSubmit()
         {
+            try
+            {
+                UserDialogs.ShowLoading(AppResources.LoadingSubmitting);
 
+                var req = new AttendanceLogCreateRequestEntity()
+                {
+                    LocationName = CurrentLocationName,
+                    Latitude = CurrentPostion.Latitude,
+                    Longitude = CurrentPostion.Longitude,
+                    LogType = _logType
+                };
+
+                await RequestExceptionHandler.HandlerRequestTaskAsync(() => _attendanceLogManager.Create(req));
+
+                UserDialogs.Toast(string.Format(AppResources.LabelSuccessMessage, _logType.ToLower()));
+                await PageNavigator.GoBackAsync();
+            }
+            catch (NoInternetConnectivityException)
+            {
+                UserDialogs.HideLoading();
+                await UserDialogs.AlertAsync(AppResources.Error_NoInternetConnectivity, string.Empty, AppResources.ButtonOk);
+            }
+            catch (DomainException ex)
+            {
+                UserDialogs.HideLoading();
+                await UserDialogs.AlertAsync(ex.Message, string.Empty, AppResources.ButtonOk);
+            }
+            catch (InvalidAuthTokenException)
+            {
+                UserDialogs.HideLoading();
+                await UserDialogs.AlertAsync(AppResources.Error_SessionExpireMessage, AppResources.Error_SessionExpireTitle);
+                await PageNavigator.ForceLogout();
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+                Logger.AppCenterLogError(ex);
+                UserDialogs.HideLoading();
+                await UserDialogs.AlertAsync(AppResources.Error_DefaultServerError, string.Empty, AppResources.ButtonOk);
+            }
+            finally
+            {
+                UserDialogs.HideLoading();
+            }
         }
 
         private async Task SetPoint(double latitude, double longitude)
@@ -156,7 +204,8 @@ namespace Presently.MobileApp.ViewModels
 
             if (parameters.ContainsKey(NavParameters.LogType))
             {
-                Title = parameters.GetValue<string>(NavParameters.LogType);
+                _logType = parameters.GetValue<string>(NavParameters.LogType);
+                Title = _logType;
             }
 
             if (parameters.GetNavigationMode() == Prism.Navigation.NavigationMode.New)

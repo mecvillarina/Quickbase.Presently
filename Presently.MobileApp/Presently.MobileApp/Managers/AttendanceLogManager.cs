@@ -1,4 +1,5 @@
-﻿using Presently.Common.DataContracts.Requests;
+﻿using Newtonsoft.Json;
+using Presently.Common.DataContracts.Requests;
 using Presently.MobileApp.Common.Exceptions;
 using Presently.MobileApp.Managers.Abstractions;
 using Presently.MobileApp.Managers.Base;
@@ -82,6 +83,8 @@ namespace Presently.MobileApp.Managers
             {
                 var reqContract = Mapper.Map<AttendanceLogCreateRequestContract>(reqEntity);
                 var accessToken = await GetAccessToken();
+
+                var json = JsonConvert.SerializeObject(reqContract);
                 var contract = await _attendanceLogWebService.Create(reqContract, accessToken);
                 return Mapper.Map<AttendanceLogEntity>(contract);
             }

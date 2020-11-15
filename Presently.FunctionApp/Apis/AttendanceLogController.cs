@@ -89,7 +89,7 @@ namespace Presently.FunctionApp.Apis
                     return new OkObjectResult(attendanceLog);
                 }
 
-                return new BadRequestObjectResult(new BadRequestResponseContract() { Message = "Customer was not created" });
+                return new BadRequestObjectResult(new BadRequestResponseContract() { Message = "Attendance Log was not created" });
             }
         }
     }
