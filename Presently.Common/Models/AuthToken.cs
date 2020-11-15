@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Presently.Common.Models
+﻿namespace Presently.Common.Models
 {
     public class AuthToken
     {

@@ -2,7 +2,7 @@
 {
     public class AuthLoginRequestContract
     {
-        public string AgentId { get; set; }
-        public string BadgeCode { get; set; }
+        public string EmployeeId { get; set; }
+        public string AccessCode { get; set; }
     }
 }
