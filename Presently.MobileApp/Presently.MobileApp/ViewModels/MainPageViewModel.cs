@@ -6,6 +6,7 @@ namespace Presently.MobileApp.ViewModels
     {
         public MainPageViewModel(IPageNavigator pageNavigator, ILogger logger) : base(pageNavigator, logger)
         {
+            Title = "Home";
         }
     }
 }

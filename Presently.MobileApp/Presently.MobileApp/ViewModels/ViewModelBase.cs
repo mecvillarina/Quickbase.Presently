@@ -14,6 +14,13 @@ namespace Presently.MobileApp.ViewModels
         public IRequestExceptionHandler RequestExceptionHandler { get; private set; }
         public IEventAggregator EventAggregator { get; private set; }
 
+        private string _title;
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
+
         public ViewModelBase(IPageNavigator pageNavigator)
         {
             PageNavigator = pageNavigator;
