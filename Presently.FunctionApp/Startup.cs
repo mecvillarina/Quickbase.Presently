@@ -42,6 +42,7 @@ namespace Presently.FunctionApp
             builder.Services.AddSingleton<IAuthService, AuthService>();
             builder.Services.AddSingleton<IEmployeeService, EmployeeService>();
             builder.Services.AddSingleton<IEmployeeSiteService, EmployeeSiteService>();
+            builder.Services.AddSingleton<IAttendanceLogService, AttendanceLogService>();
         }
     }
 }
