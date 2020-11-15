@@ -1,5 +1,4 @@
-﻿using Presently.MobileApp.Common;
-using Presently.MobileApp.Common.Constants;
+﻿using Presently.MobileApp.Common.Constants;
 using Xamarin.Forms;
 
 namespace Presently.MobileApp.Effects

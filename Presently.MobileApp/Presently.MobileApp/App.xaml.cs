@@ -1,9 +1,21 @@
-using Prism;
-using Prism.Ioc;
+using Acr.UserDialogs;
+using Presently.MobileApp.Managers;
+using Presently.MobileApp.Managers.Abstractions;
+using Presently.MobileApp.Managers.Mappers;
+using Presently.MobileApp.Repositories;
+using Presently.MobileApp.Repositories.Abstractions;
+using Presently.MobileApp.Repositories.Database;
+using Presently.MobileApp.Utilities;
+using Presently.MobileApp.Utilities.Abstractions;
 using Presently.MobileApp.ViewModels;
 using Presently.MobileApp.Views;
-using Xamarin.Essentials.Interfaces;
+using Presently.MobileApp.WebServices;
+using Presently.MobileApp.WebServices.Abstractions;
+using Presently.MobileApp.WebServices.Utilities;
+using Prism;
+using Prism.Ioc;
 using Xamarin.Essentials.Implementation;
+using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
 
 namespace Presently.MobileApp
@@ -24,10 +36,64 @@ namespace Presently.MobileApp
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
+            RegisterPlugins(containerRegistry);
+            RegisterUtilites(containerRegistry);
+            RegisterRepositories(containerRegistry);
+            RegisterWebServices(containerRegistry);
+            RegisterManagers(containerRegistry);
+            RegisterUI(containerRegistry);
+        }
 
+        private void RegisterUI(IContainerRegistry containerRegistry)
+        {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+        }
+
+        private void RegisterManagers(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterSingleton<IInternalAuthManager, InternalAuthManager>();
+            containerRegistry.RegisterSingleton<IAuthManager, AuthManager>();
+            containerRegistry.RegisterSingleton<IAppManager, AppManager>();
+        }
+
+        private void RegisterWebServices(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.Register<IHttpService, HttpService>();
+            containerRegistry.Register<IAppHttpClient, AppHttpClient>();
+            containerRegistry.RegisterSingleton<IAuthWebService, AuthWebService>();
+        }
+
+        private void RegisterRepositories(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterSingleton<IMobileDatabase, MobileDatabase>();
+            containerRegistry.RegisterSingleton<IKeyStoreRepository, KeyStoreRepository>();
+            containerRegistry.RegisterSingleton<IInternalAuthRepository, InternalAuthRepository>();
+            containerRegistry.RegisterSingleton<IAppUserRepository, AppUserRepository>();
+        }
+
+        private void RegisterUtilites(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
+            containerRegistry.RegisterSingleton<IConnectivity, ConnectivityImplementation>();
+            containerRegistry.RegisterSingleton<IPermissions, PermissionsImplementation>();
+            containerRegistry.RegisterSingleton<IGeolocation, GeolocationImplementation>();
+            containerRegistry.RegisterSingleton<IPreferences, PreferencesImplementation>();
+            containerRegistry.RegisterSingleton<ISecureStorage, SecureStorageImplementation>();
+            containerRegistry.RegisterSingleton<ILogger, Logger>();
+            containerRegistry.RegisterSingleton<IHttpMessageHelper, HttpMessageHelper>();
+            containerRegistry.RegisterSingleton<IJsonHelper, JsonHelper>();
+            containerRegistry.RegisterSingleton<IRequestExceptionHandler, RequestExceptionHandler>();
+
+            containerRegistry.RegisterSingleton<IServiceMapper, ServiceMapper>();
+            containerRegistry.RegisterSingleton<IAppCenterLogger, AppCenterLogger>();
+            containerRegistry.RegisterSingleton<IDebugLogger, DebugLogger>();
+            containerRegistry.Register<IPageNavigator, AppPageNavigator>();
+        }
+
+        private void RegisterPlugins(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterInstance(UserDialogs.Instance);
         }
     }
 }

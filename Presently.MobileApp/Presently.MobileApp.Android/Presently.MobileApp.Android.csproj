@@ -84,6 +84,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\AndroidSqlite.cs" />
     <Compile Include="Effects\NoBorderPlatformEffect.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="MainActivity.cs" />

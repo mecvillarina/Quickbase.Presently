@@ -2,7 +2,9 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Presently.MobileApp.Droid.Database;
 using Presently.MobileApp.Droid.Maps;
+using Presently.MobileApp.Repositories.Abstractions;
 using Prism;
 using Prism.Ioc;
 using Xamarin.Forms.GoogleMaps.Android;
@@ -66,6 +68,8 @@ namespace Presently.MobileApp.Droid
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Register any platform specific implementations
+
+            containerRegistry.RegisterSingleton<ISQLiteConnectionFactory, AndroidSqlite>();
         }
     }
 }
