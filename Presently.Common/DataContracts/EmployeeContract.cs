@@ -1,10 +1,11 @@
-﻿using Presently.Common.Models;
+﻿using Presently.Common.Abstractions;
+using Presently.Common.Models;
 using System;
 using System.Collections.Generic;
 
 namespace Presently.Common.DataContracts
 {
-    public class EmployeeContract
+    public class EmployeeContract : IJsonDataContract
     {
         public long RecordId { get; set; }
         public string FirstName { get; set; }

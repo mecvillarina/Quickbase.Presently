@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "406029249336",
+    "firebase_url": "https://sylvan-weft-143613.firebaseio.com",
+    "project_id": "sylvan-weft-143613",
+    "storage_bucket": "sylvan-weft-143613.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406029249336:android:6e791de82050b8d5a4efcd",
+        "android_client_info": {
+          "package_name": "com.mecodes.brew_crew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406029249336-1onaj3nrtkb1218qthgl7veq7kfjh380.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ8gaeklnnOsicstDHuYaUWSuJpkOySqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406029249336-1onaj3nrtkb1218qthgl7veq7kfjh380.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406029249336:android:f5b44199faea27c3a4efcd",
+        "android_client_info": {
+          "package_name": "com.mecodes.flutterInstagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406029249336-1onaj3nrtkb1218qthgl7veq7kfjh380.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ8gaeklnnOsicstDHuYaUWSuJpkOySqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406029249336-1onaj3nrtkb1218qthgl7veq7kfjh380.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406029249336:android:6a3edbd1e8418d4ca4efcd",
+        "android_client_info": {
+          "package_name": "com.mecodes.presently"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406029249336-1onaj3nrtkb1218qthgl7veq7kfjh380.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ8gaeklnnOsicstDHuYaUWSuJpkOySqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406029249336-1onaj3nrtkb1218qthgl7veq7kfjh380.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

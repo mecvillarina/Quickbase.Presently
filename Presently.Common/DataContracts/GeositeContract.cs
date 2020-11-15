@@ -1,10 +1,11 @@
-﻿using Presently.Common.Models;
+﻿using Presently.Common.Abstractions;
+using Presently.Common.Models;
 using System;
 using System.Collections.Generic;
 
 namespace Presently.Common.DataContracts
 {
-    public class GeositeContract
+    public class GeositeContract : IJsonDataContract
     {
         public long RecordId { get; set; }
         public string Name { get; set; }
