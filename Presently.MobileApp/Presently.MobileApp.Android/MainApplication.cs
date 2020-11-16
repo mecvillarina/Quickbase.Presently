@@ -7,7 +7,7 @@ namespace Presently.MobileApp.Droid
 {
     [Application(Theme = "@style/MainTheme")]
     [MetaData("com.google.android.maps.v2.API_KEY",
-              Value = "AIzaSyCPVRGomDyb8mnUTto3AYd0GnxcGi_Acrc")]
+              Value = "")]
     public class MainApplication : Application
     {
         public MainApplication(IntPtr javaReference, JniHandleOwnership transfer)
