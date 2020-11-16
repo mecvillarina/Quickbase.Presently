@@ -5,6 +5,6 @@
         public const string AppCenterLogTag = "";
         public const string AppCenterAndroidKey = "";
         public const string AppCenteriOSKey = "";
-        public const string EffectsNamespace = "Presently.Mobile.Core";
+        public const string EffectsNamespace = "Presently.Mobile";
     }
 }
